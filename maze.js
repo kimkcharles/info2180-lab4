@@ -1,4 +1,10 @@
 window.onload = function() {
+
+	//This is for if the boundary is touched
+	var touched=false;
+
+
+
 	//Excercise 1
 	let wall= document.getElementById("boundary1");
 	wall.addEventListener("mouseover", function() {
@@ -12,12 +18,24 @@ window.onload = function() {
 
 	
 	for (let w=0; w<walls.length; w++){
-			walls[w].addEventListener("mouseover", function(){
-				for (a=0; a<walls.length ; a++){
-					walls[a].classList.add("youlose");
-				}
-			})
+		walls[w].addEventListener("mouseover", function(){
+			for (a=0; a<walls.length ; a++){
+				walls[a].classList.add("youlose");
+			}
+			touched=true;
+		})
+	}
+
+
+	//Excercise 3
+	let ended = document.getElementById("end");
+	ended.addEventListener("mouseover", function(){
+		if (touched==false){
+			alert("You Win!!");
 		}
+	});
+
+		
 
 
 	
