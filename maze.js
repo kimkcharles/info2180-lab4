@@ -2,6 +2,7 @@ window.onload = function() {
 
 	//This is for if the boundary is touched
 	var touched=false;
+	var statmess=document.getElementById("status");
 
 
 
@@ -19,6 +20,7 @@ window.onload = function() {
 	
 	for (let w=0; w<walls.length; w++){
 		walls[w].addEventListener("mouseover", function(){
+			statmess.innerHTML="You Lose!"; //Exercise 5
 			for (a=0; a<walls.length ; a++){
 				walls[a].classList.add("youlose");
 			}
@@ -31,7 +33,8 @@ window.onload = function() {
 	let ended = document.getElementById("end");
 	ended.addEventListener("mouseover", function(){
 		if (touched==false){
-			alert("You Win!!");
+			//alert("You Win!");
+			statmess.innerHTML="You Win!"; //Exercise 5
 		}
 	});
 
@@ -42,6 +45,7 @@ window.onload = function() {
 	let begin =document.getElementById("start");
 	begin.addEventListener("click", function(){
 		//alert("Lets start!!");
+
 		touched=false;
 		if (walls.length!=0){
 			walls.forEach(function(e){
@@ -50,7 +54,8 @@ window.onload = function() {
 		}
 	});
 
-		
+
+
 
 
 	
