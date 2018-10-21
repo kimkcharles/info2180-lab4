@@ -35,6 +35,21 @@ window.onload = function() {
 		}
 	});
 
+
+
+	//Excercise 4
+
+	let begin =document.getElementById("start");
+	begin.addEventListener("click", function(){
+		//alert("Lets start!!");
+		touched=false;
+		if (walls.length!=0){
+			walls.forEach(function(e){
+				e.classList.remove("youlose");
+			})
+		}
+	});
+
 		
 
 
