@@ -6,7 +6,7 @@ window.onload = function() {
 	var stat=false;
 	var statmess=document.getElementById("status");
 	var startMaze=false;
-	//var touchedwalls= document.querySelectorAll(".youlose")
+	//var touchwalls= document.querySelectorAll(".youlose")
 
 
 	//Excercise 1
